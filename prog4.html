@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Registation form</title>
+<style>
+    body{
+        background-image: linear-gradient(to right,blue,pink);
+    }
+    h1{
+        font-family:"courier new", courier,monospace;
+        
+    }
+    table{
+        background-color: white;
+    }
+    button
+{
+box-shadow:3px 5px voilet;
+}
+.form
+{
+    width: 600;
+    height: 600;
+    top: 200px;
+    right: 200px;
+    left: 200px;
+    margin:500px;
+
+}
+table{
+    border-spacing: 30;
+}
+#button {
+            text-align: center;
+            padding: 10px 15px;
+            background-color: violet;
+            color: white;
+            border: none;
+            cursor: pointer;
+        
+        }
+#button:hover {
+            background-color: #45a049;
+}
+
+</style>
+<script>
+function myfunc(event)
+{
+    event.preventDefault();  
+    var gender=document.querySelector('input[name="gender"]:checked').value;
+    
+    var a=document.getElementById("a1").value;
+    var b=document.getElementById("a2").value;
+    var c=document.getElementById("a3").value;
+    var d=document.getElementById("a4").value;
+    var e=document.getElementById("a5").value;
+    var f=document.getElementById("a6").value;
+    
+    document.write("<br>",a);
+    document.write("<br>",b);
+    document.write("<br>",c);
+    document.write("<br>",d);
+    document.write("<br>",e);
+    document.write("<br>",f);
+    document.write("<br>",gender);
+    }
+</script>
+    </head>
+    <body>
+    
+    <div class="form">
+        <table>
+           <tr>
+            <td>
+                <h1> Registation</h1>
+            </td>
+           </tr>
+            <tr>
+                <td>
+                  <b>Full Name</b> <br><br>
+                   <input type="text" name="text" id="a1" placeholder="Enter your name"/><br><br></td>
+                  <td>
+                    <b>UserName</b> <br><br> 
+                    <input type="text" name="username" id="a2" placeholder="Enter your userName"/>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                  <b>Email</b><br><br> 
+                  <input type="email" name="email" id="a3" placeholder="Enter your email"/><br><br></td>
+                  <td>
+                    <b>Phone Number</b><br><br>
+                     <input type="text" name="phone Number" id="a4" maxlength="10" placeholder="Enter the phone Number"/>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>
+                  <b>Password</b><br><br> 
+                  <input type="text" name="password" id="a5" placeholder="Enter your password"/><br>
+                </td>
+                <td>
+                    <b>confirm password</b><br><br> 
+                    <input type="text" name="password" id="a6" placeholder="confirm your password"/>
+
+                </td>
+            </tr>
+            <div id="radio">
+            <tr>
+            <td><b>Gender</b><br><br>
+            <input type="radio" id="o" value="Male" name="gender"/>
+            <label for ="o">Male</label>
+            </td>
+            <td>
+            <input type="radio" id="o" value="Female" name="gender" checked>
+            <label for ="o">Female</label>
+            </td>
+              <td>
+            <input type="radio" id="o" value="Others" name="gender"/>
+            <label for ="o">others</label>
+            </td>
+            </tr>
+        </div>
+            <tr>
+            <td>
+            <input type="button" name="register" value="register" id="button" onclick="myfunc(event)"></td></tr>
+            <br>
+
+        </table>
+            </div>
+            
+    </body>
+</html>
